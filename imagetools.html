@@ -1,0 +1,186 @@
+<!doctype html>
+<html lang="bn">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Image tools · ছবি টুলস</title>
+  <link rel="stylesheet" href="imagetools.css">
+</head>
+<body>
+<main>
+  <header class="top">
+    <div class="logo" aria-hidden="true"><svg viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="16" rx="3"/><circle cx="9" cy="10" r="1.8"/><path d="m21 16-5-5-8 9"/></svg></div>
+    <div>
+      <h1>Image tools <small>ছবি টুলস</small></h1>
+      <p>Make pictures smaller, change their size, convert JPG / PNG / WebP, or put them in a PDF. Pictures never leave your device: nothing is uploaded.</p>
+    </div>
+  </header>
+
+  <section id="drop" class="card drop" tabindex="0" role="button" aria-label="Add pictures">
+    <svg viewBox="0 0 24 24"><path d="M12 16V4m0 0-4 4m4-4 4 4"/><path d="M4 15v3a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-3"/></svg>
+    <b>Drop pictures here, paste them (Ctrl+V), or click to choose</b>
+    <span>ছবি এখানে ছাড়ুন বা বেছে নিন · JPG, PNG, WebP</span>
+  </section>
+  <input type="file" id="file" accept="image/jpeg,image/png,image/webp,.jpg,.jpeg,.png,.webp" multiple hidden>
+
+  <section id="listCard" class="card" hidden>
+    <h2>Pictures <span id="count" class="pill">0</span>
+      <span class="sp"></span>
+      <button id="addMore" class="tb" type="button">Add more</button>
+      <button id="clearAll" class="tb" type="button">Remove all</button>
+    </h2>
+    <ul id="list" class="files"></ul>
+  </section>
+
+  <section id="tools" class="card" hidden>
+    <div class="tabs" role="tablist" aria-label="Tool">
+      <button role="tab" id="tab-compress" data-tab="compress" aria-selected="true" aria-controls="p-compress" type="button">Compress <small>ছোট করা</small></button>
+      <button role="tab" id="tab-resize" data-tab="resize" aria-selected="false" aria-controls="p-resize" type="button">Resize <small>মাপ বদল</small></button>
+      <button role="tab" id="tab-convert" data-tab="convert" aria-selected="false" aria-controls="p-convert" type="button">Convert <small>ফরম্যাট</small></button>
+      <button role="tab" id="tab-pdf" data-tab="pdf" aria-selected="false" aria-controls="p-pdf" type="button">To PDF <small>পিডিএফ</small></button>
+    </div>
+
+    <div id="p-compress" class="panel" role="tabpanel" aria-labelledby="tab-compress">
+      <div class="opts">
+        <label>Save as
+          <select id="cFmt">
+            <option value="same">Same as original</option>
+            <option value="jpg">JPG</option>
+            <option value="webp" data-needs="webp">WebP (smallest)</option>
+          </select>
+        </label>
+        <label>Longest side
+          <select id="cMax">
+            <option value="0">Keep the size</option>
+            <option value="3840">4K · 3840 px</option>
+            <option value="2560">2560 px</option>
+            <option value="1920">Full HD · 1920 px</option>
+            <option value="1280">1280 px</option>
+            <option value="1024">1024 px</option>
+            <option value="800">800 px</option>
+          </select>
+        </label>
+        <label>Aim for
+          <select id="cMode">
+            <option value="quality">Quality I choose</option>
+            <option value="target">A file size (KB)</option>
+          </select>
+        </label>
+      </div>
+      <div class="opts">
+        <label id="cQWrap" class="grow"><span>Quality <output id="cQVal">75</output>%</span>
+          <input type="range" id="cQ" min="10" max="100" value="75">
+        </label>
+        <label id="cTWrap" class="grow" hidden>Each picture at most (KB)
+          <input type="number" id="cT" min="5" max="50000" value="200" inputmode="numeric">
+        </label>
+      </div>
+      <p class="hint">Lower quality means a smaller file. 70–80% usually looks the same to the eye. PNG keeps every pixel exactly, so it can't be squeezed with a quality number: choose JPG or WebP, or make the picture smaller.</p>
+    </div>
+
+    <div id="p-resize" class="panel" role="tabpanel" aria-labelledby="tab-resize" hidden>
+      <div class="opts">
+        <label>Resize by
+          <select id="rMode">
+            <option value="percent">Percent</option>
+            <option value="exact">Width and height (px)</option>
+            <option value="fit">Fit inside a box (px)</option>
+          </select>
+        </label>
+        <label id="rPWrap">Percent of the original
+          <input type="number" id="rP" min="1" max="1000" value="50" inputmode="numeric">
+        </label>
+        <label id="rWWrap" hidden>Width (px)
+          <input type="number" id="rW" min="1" max="16384" placeholder="auto" inputmode="numeric">
+        </label>
+        <label id="rHWrap" hidden>Height (px)
+          <input type="number" id="rH" min="1" max="16384" placeholder="auto" inputmode="numeric">
+        </label>
+        <label id="rKWrap" class="check" hidden><input type="checkbox" id="rK" checked> Keep the proportions</label>
+      </div>
+      <div class="opts">
+        <label>Save as
+          <select id="rFmt">
+            <option value="same">Same as original</option>
+            <option value="jpg">JPG</option>
+            <option value="png">PNG</option>
+            <option value="webp" data-needs="webp">WebP</option>
+          </select>
+        </label>
+        <label class="grow"><span>Quality <output id="rQVal">90</output>%</span>
+          <input type="range" id="rQ" min="10" max="100" value="90">
+        </label>
+      </div>
+      <p class="hint">With “Width and height”, fill only one box to let the other follow the proportions. “Fit inside a box” never makes a small picture bigger. Several pictures of different shapes? Use Percent or Fit.</p>
+    </div>
+
+    <div id="p-convert" class="panel" role="tabpanel" aria-labelledby="tab-convert" hidden>
+      <div class="opts">
+        <label>Convert to
+          <select id="vFmt">
+            <option value="jpg">JPG</option>
+            <option value="png">PNG</option>
+            <option value="webp" data-needs="webp">WebP</option>
+          </select>
+        </label>
+        <label class="grow" id="vQWrap"><span>Quality <output id="vQVal">92</output>%</span>
+          <input type="range" id="vQ" min="10" max="100" value="92">
+        </label>
+        <label id="vBgWrap">Background for see-through parts
+          <input type="color" id="vBg" value="#ffffff">
+        </label>
+      </div>
+      <p class="hint">JPG can't be see-through, so transparent parts of a PNG or WebP are filled with the background colour. PNG is lossless and has no quality setting.</p>
+    </div>
+
+    <div id="p-pdf" class="panel" role="tabpanel" aria-labelledby="tab-pdf" hidden>
+      <div class="opts">
+        <label>Page size
+          <select id="fSize">
+            <option value="a4">A4</option>
+            <option value="letter">Letter</option>
+            <option value="fit">Same as the picture</option>
+          </select>
+        </label>
+        <label id="fOWrap">Direction
+          <select id="fOri">
+            <option value="auto">Automatic</option>
+            <option value="portrait">Portrait (tall)</option>
+            <option value="landscape">Landscape (wide)</option>
+          </select>
+        </label>
+        <label>Margin
+          <select id="fMar">
+            <option value="none">None</option>
+            <option value="small" selected>Small</option>
+            <option value="medium">Medium</option>
+          </select>
+        </label>
+        <label class="grow"><span>Picture quality <output id="fQVal">90</output>%</span>
+          <input type="range" id="fQ" min="40" max="100" value="90">
+        </label>
+      </div>
+      <p class="hint">One PDF with every picture in the order shown above (use ↑ ↓ to change the order). Transparent parts become white. Pictures bigger than 4200 px on the long side are scaled down.</p>
+    </div>
+
+    <div class="go">
+      <button id="run" class="btn" type="button">Compress</button>
+      <progress id="prog" max="1" value="0" hidden></progress>
+      <span id="status" class="status" role="status" aria-live="polite"></span>
+    </div>
+  </section>
+
+  <section id="outCard" class="card" hidden>
+    <h2>Results <span id="sum" class="pill"></span>
+      <span class="sp"></span>
+      <button id="zip" class="btn small" type="button" hidden>Download all (.zip)</button>
+    </h2>
+    <ul id="out" class="files"></ul>
+  </section>
+
+  <p id="webpNote" class="hint" hidden>This browser can't save WebP, so the WebP choices are turned off. JPG and PNG work everywhere.</p>
+</main>
+<script src="image-lib.js"></script>
+<script src="imagetools.js"></script>
+</body>
+</html>

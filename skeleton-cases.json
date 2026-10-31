@@ -1,0 +1,114 @@
+[
+  {
+    "roman": "nirbachon",
+    "expected": "নির্বাচন"
+  },
+  {
+    "roman": "prodhanmontri",
+    "expected": "প্রধানমন্ত্রী"
+  },
+  {
+    "roman": "sarkar",
+    "expected": "সরকার"
+  },
+  {
+    "roman": "kosto",
+    "expected": "কষ্ট"
+  },
+  {
+    "roman": "prokriti",
+    "expected": "প্রকৃতি"
+  },
+  {
+    "roman": "poribartan",
+    "expected": "পরিবর্তন"
+  },
+  {
+    "roman": "swadhin",
+    "expected": "স্বাধীন"
+  },
+  {
+    "roman": "bakyo",
+    "expected": "বাক্য"
+  },
+  {
+    "roman": "songskriti",
+    "expected": "সংস্কৃতি"
+  },
+  {
+    "roman": "obosthan",
+    "expected": "অবস্থান"
+  },
+  {
+    "roman": "montri",
+    "expected": "মন্ত্রী"
+  },
+  {
+    "roman": "bidyalay",
+    "expected": "বিদ্যালয়"
+  },
+  {
+    "roman": "protiyogita",
+    "expected": "প্রতিযোগিতা"
+  },
+  {
+    "roman": "ortho",
+    "expected": "অর্থ"
+  },
+  {
+    "roman": "sorkari",
+    "expected": "সরকারি"
+  },
+  {
+    "roman": "shorbo",
+    "expected": "সর্ব"
+  },
+  {
+    "roman": "dharmik",
+    "expected": "ধার্মিক"
+  },
+  {
+    "roman": "bishwas",
+    "expected": "বিশ্বাস"
+  },
+  {
+    "roman": "porikkha",
+    "expected": "পরীক্ষা"
+  },
+  {
+    "roman": "shikkhito",
+    "expected": "শিক্ষিত"
+  },
+  {
+    "roman": "uttoron",
+    "expected": "উত্তরণ"
+  },
+  {
+    "roman": "probhab",
+    "expected": "প্রভাব"
+  },
+  {
+    "roman": "bartaman",
+    "expected": "বর্তমান"
+  },
+  {
+    "roman": "rastro",
+    "expected": "রাষ্ট্র"
+  },
+  {
+    "roman": "unnoyon",
+    "expected": "উন্নয়ন"
+  },
+  {
+    "roman": "ongsho",
+    "expected": "অংশ"
+  },
+  {
+    "roman": "somporko",
+    "expected": "সম্পর্ক"
+  },
+  {
+    "roman": "bhumika",
+    "expected": "ভূমিকা"
+  }
+]

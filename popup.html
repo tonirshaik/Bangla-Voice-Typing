@@ -1,0 +1,231 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Bangla Voice Typing</title>
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <svg width="0" height="0" style="position:absolute" aria-hidden="true"><defs>
+<symbol id="i-mic" viewBox="0 0 24 24"><rect x="9" y="3" width="6" height="11" rx="3"/><path d="M5 11a7 7 0 0 0 14 0M12 18v3"/></symbol>
+<symbol id="i-cam" viewBox="0 0 24 24"><path d="M4 8h3l2-3h6l2 3h3v11H4z"/><circle cx="12" cy="13" r="3.5"/></symbol>
+<symbol id="i-page" viewBox="0 0 24 24"><rect x="6" y="3" width="12" height="18" rx="2"/><path d="M9 8h6M9 12h6M9 16h4"/></symbol>
+<symbol id="i-hist" viewBox="0 0 24 24"><circle cx="12" cy="12" r="8"/><path d="M12 7v5l3 2"/></symbol>
+<symbol id="i-rec" viewBox="0 0 24 24"><rect x="3" y="6" width="13" height="12" rx="2"/><path d="M16 10l5-3v10l-5-3"/></symbol>
+<symbol id="i-img" viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="16" rx="3"/><circle cx="9" cy="10" r="1.8"/><path d="m21 16-5-5-8 9"/></symbol>
+<symbol id="i-srch" viewBox="0 0 24 24"><circle cx="11" cy="11" r="6"/><path d="M20 20l-4-4"/></symbol>
+</defs></svg>
+
+  <div class="hd">
+    <div class="logo"><svg><use href="#i-mic"/></svg></div>
+    <div><h1>Bangla Voice Typing <span class="ver" id="ver" title="Current version"></span></h1><p>Speak or type phonetically in Bangla</p></div>
+  </div>
+
+  <div class="dates" id="dates" aria-label="Today's date and time">
+    <div class="dtop"><div class="dclock"><b id="dtTime" title="24-hour time"></b><span class="t12" id="dtTime12" title="12-hour time"></span></div><span id="dtMeta" title="Time zone offset · ISO 8601 date"></span></div>
+    <div class="drow"><span class="dl">বাংলা</span><span class="dv" id="dtBn"></span></div>
+    <div class="drow"><span class="dl">English</span><span class="dv" id="dtEn"></span></div>
+    <div class="drow"><span class="dl">আরবি</span><span class="dv" id="dtAr" lang="bn" title="হিজরি (উম্মুল কুরা) — কিছু দেশে ১ দিনের তফাত হতে পারে"></span></div>
+  </div>
+
+  <div class="startrow">
+    <div class="langsel">
+      <select id="lang" aria-label="Language / accent">
+        <option value="bn-BD">বাংলা (Bangladesh)</option>
+        <option value="bn-IN">বাংলা (India)</option>
+        <option value="en-US">English (US)</option>
+        <option value="en-GB">English (UK)</option>
+      </select>
+    </div>
+    <button id="toggle" class="primary" type="button">Start on this tab</button>
+  </div>
+  <p id="note" class="note" hidden></p>
+
+  <div class="grid"><button id="shot" class="tile" type="button"><span class="ic"><svg><use href="#i-cam"/></svg></span><span class="tx"><b>Screenshot</b><small>Alt+S, mark up</small></span></button><button id="shotFull" class="tile" type="button"><span class="ic"><svg><use href="#i-page"/></svg></span><span class="tx"><b>Full page</b><small>Whole scroll</small></span></button><button id="shotHist" class="tile" type="button"><span class="ic"><svg><use href="#i-hist"/></svg></span><span class="tx"><b>History</b><small>Open, copy</small></span></button><button id="rec" class="tile" type="button"><span class="ic"><svg><use href="#i-rec"/></svg></span><span class="tx"><b>Record area</b><small>Mark it, WebM + mic</small></span></button><button id="imgTools" class="tile" type="button"><span class="ic"><svg><use href="#i-img"/></svg></span><span class="tx"><b>Image tools</b><small>Shrink, resize, PDF</small></span></button></div>
+
+  <div class="groups">
+    <label class="check"><input type="checkbox" id="showButton"><span>Floating mic button on pages</span></label>
+
+    <details>
+      <summary>Typing and voice</summary>
+      <div class="body">
+        <label class="check"><input type="checkbox" id="phonetic"> <span>Phonetic typing: <b>tumi</b> → তুমি <small>(Alt+B)</small></span></label>
+        <label class="check"><input type="checkbox" id="smartPredictive"> <span>AI Smart Predictive Typing <small>Personalized word suggestions using your choices and the previous words (bigram/trigram, on-device)</small></span></label>
+        <label class="check"><input type="checkbox" id="inlinePreview"> <span>Live inline preview <small>While typing phonetically, shows the Bangla word floating above what you typed (what Space will insert)</small></span></label>
+        <label class="check"><input type="checkbox" id="nextWord"> <span>Next-word suggestions <small>After a Bangla word and a space, shows likely next words (আমি → যাচ্ছি, ভালো…). ↓ to choose, Tab / Enter to insert, Esc to hide</small></span></label>
+        <label class="check"><input type="checkbox" id="voiceRerank"> <span>Smarter voice typing (Bangla) <small>When the mic offers several guesses, picks the one with real words that fit the sentence (on-device). Turn off to always take the first guess</small></span></label>
+        <label class="check"><input type="checkbox" id="spellBn"> <span>Bangla spell check: wavy red line under misspelled words <small>(right-click a word to fix it)</small></span></label>
+        <button id="spellReset" class="secondary" type="button">Forget words I added to the spell-check dictionary</button>
+        <label class="check"><input type="checkbox" id="commands"><span>Voice commands <small>(dari, koma, notun line…)</small></span></label>
+        <label class="check"><input type="checkbox" id="frEnabled"><span>Find &amp; Replace inside text boxes <small>(Ctrl+F / Alt+A)</small></span></label>
+        <details class="sub">
+    <summary>Find &amp; Replace guide</summary>
+    <ul class="cmds">
+      <li>Click inside any text box that has some text, then press <kbd>Ctrl</kbd>+<kbd>F</kbd> to find, or <kbd>Ctrl</kbd>+<kbd>H</kbd> to find and replace. Every match is highlighted.</li>
+      <li><kbd>Enter</kbd> / <kbd>Shift</kbd>+<kbd>Enter</kbd> go to the next / previous match. In the Replace box, <kbd>Enter</kbd> replaces one and <kbd>Ctrl</kbd>+<kbd>Alt</kbd>+<kbd>Enter</kbd> replaces all. <kbd>Esc</kbd> closes it. Replacing can be undone with <kbd>Ctrl</kbd>+<kbd>Z</kbd>.</li>
+      <li><b>Aa</b> match case, <b>ab</b> whole word (works with Bangla kar and fola), <b>.*</b> regular expression (<code>$1</code> and <code>\n</code> work in Replace), <b>বা</b> phonetic: type <b>roni</b> to find রনি, and in Replace type <b>rahat</b> to insert রাহাত (capital R means ড়). <b>AB</b> keeps the letter case.</li>
+      <li>If you select several lines first, it searches only inside your selection (the ≡ button turns this on or off).</li>
+      <li>Copy, cut, paste and select all (<kbd>Ctrl</kbd>+<kbd>C</kbd> / <kbd>X</kbd> / <kbd>V</kbd> / <kbd>A</kbd>) work in both boxes, even on sites that block copy and paste.</li>
+      <li>An empty box, a password box, Google Docs and code editors like VS Code keep their own Ctrl+F.</li>
+    </ul>
+  </details>
+        <details class="sub">
+    <summary>Phonetic typing guide</summary>
+    <ul class="cmds">
+      <li>Type in English letters and press <kbd>Space</kbd>: <b>tumi kemon acho</b> → তুমি কেমন আছো.</li>
+      <li>While you type, a list of spellings appears. The first one is used by default. Press <kbd>↓</kbd> / <kbd>↑</kbd> to choose another (the last item keeps your English letters), then <kbd>Space</kbd> or <kbd>Enter</kbd>. You can also click an item. <kbd>Esc</kbd> closes the list.</li>
+      <li>Press <kbd>Backspace</kbd> right after a word was converted to get your English letters back.</li>
+      <li><b>.</b> after a word → ।</li>
+      <li>Small/capital letters differ: <b>t</b> ত, <b>T</b> ট · <b>th</b> থ, <b>Th</b> ঠ · <b>d</b> দ, <b>D</b> ড · <b>n</b> ন, <b>N</b> ণ · <b>s</b> স, <b>S</b> শ, <b>Sh</b> ষ · <b>r</b> র, <b>R</b> ড়</li>
+      <li><b>ch</b> / <b>chh</b> → ছ, <b>c</b> → চ · <b>ng</b> → ং, <b>Ng</b> → ঙ · <b>^</b> → ঁ</li>
+      <li>Vowels: <b>a</b> া/আ, <b>i</b> ি/ই, <b>u</b> ু/উ, <b>e</b> ে/এ, <b>oi</b> ৈ, <b>ou</b> ৌ. A final <b>o</b> after a letter gives ো (valo → ভালো); a middle <b>o</b> is silent (kemon → কেমন). Use capital <b>O</b> for ো anywhere (tOmar → তোমার).</li>
+      <li>Joined letters: <b>sundor</b> → সুন্দর, <b>prem</b> → প্রেম, <b>dhonyobad</b> → ধন্যবাদ. Use <b>rr</b> for reph (<b>korrmo</b> → কর্ম). Use a backtick <b>`</b> to stop two letters joining.</li>
+      <li>Not converted: words after <b>@ / _ #</b>, and links (http, www). For English text, turn it off with <kbd>Alt</kbd>+<kbd>B</kbd>.</li>
+      <li>Common words come from a built-in word list, so the right spelling is first: <b>jonno</b> → জন্য, <b>tomar</b> → তোমার, <b>dhonnobad</b> → ধন্যবাদ.</li>
+      <li>A large Bangla word list moves real words to the top of the list: <b>proshno</b> → প্রশ্ন, <b>poribar</b> → পরিবার.</li>
+      <li>Suggestions appear while you are still typing: <b>dhonno</b> shows ধন্যবাদ, and <b>shompo</b> offers সম্পর্ক, so long words need fewer keys. They start after 3 letters and sit below the normal spellings, so <kbd>Space</kbd> still gives the usual word.</li>
+      <li>The spelling you choose is remembered: next time you type the same word, your choice is first in the list.</li>
+    </ul>
+    <button id="resetLearned" class="secondary" type="button">Forget my chosen spellings</button>
+  </details>
+        <label class="field">
+    <span>Custom word corrections <small>(one per line: wrong = correct)</small></span>
+    <textarea id="dictionary" rows="4" spellcheck="false" placeholder="মিটিং = meeting&#10;গিটহাব = GitHub"></textarea>
+  </label>
+        <details id="learningTools" class="sub">
+    <summary>Learn from my choices & custom words</summary>
+    <p class="hint">বারবার যে বানানটি বেছে নেবে, সেটি ধীরে ধীরে আগে আসবে। একবারের ভুল ক্লিকে র‍্যাঙ্কিং বদলাবে না। আগের Roman শব্দের সঙ্গে কোন বানান বেশি বেছে নেওয়া হয়েছে, সেটিও শেখা হবে।</p>
+    <div class="field">
+      <label for="customRoman"><span>Roman word</span></label>
+      <input id="customRoman" type="text" spellcheck="false" placeholder="e.g. amarname" style="box-sizing:border-box;width:100%;padding:8px;margin:4px 0 8px">
+      <label for="customBangla"><span>বাংলা / পছন্দের রূপ</span></label>
+      <input id="customBangla" type="text" spellcheck="false" placeholder="যেমন: আমারনাম" style="box-sizing:border-box;width:100%;padding:8px;margin:4px 0 8px">
+      <button id="addCustomWord" class="secondary" type="button">Add / update word</button>
+    </div>
+    <label class="field">
+      <span>My custom words <small>(one per line: roman = বাংলা)</small></span>
+      <textarea id="customWords" rows="4" spellcheck="false" placeholder="amarname = আমারনাম&#10;officee = অফিসে"></textarea>
+    </label>
+    <div style="display:flex;gap:8px;flex-wrap:wrap;margin:8px 0">
+      <button id="saveCustomWords" class="secondary" type="button">Save custom words</button>
+      <button id="exportLearning" class="secondary" type="button">Export learned data</button>
+      <button id="importLearningButton" class="secondary" type="button">Import learned data</button>
+      <input id="importLearningFile" type="file" accept="application/json,.json" hidden>
+    </div>
+    <p id="learningNote" class="hint" role="status"></p>
+  </details>
+        <details class="sub">
+    <summary>Voice command list</summary>
+    <ul class="cmds">
+      <li><b>দাঁড়ি</b> (dari) → ।</li>
+      <li><b>কমা</b> (koma) → ,</li>
+      <li><b>প্রশ্নবোধক চিহ্ন</b> (proshnobodhok chinho) → ?</li>
+      <li><b>বিস্ময়সূচক চিহ্ন</b> (bismoyshuchok chinho) → !</li>
+      <li><b>কোলন</b> (kolon) → : &nbsp; <b>সেমিকোলন</b> (semikolon) → ;</li>
+      <li><b>হাইফেন</b> (hyphen) / <b>ড্যাশ</b> (dash) → -</li>
+      <li><b>নতুন লাইন</b> (notun line) → Enter</li>
+      <li><b>নতুন অনুচ্ছেদ</b> (notun onucched) → blank line between paragraphs</li>
+      <li>In English mode say: period, comma, question mark, exclamation mark, colon, semicolon, hyphen, new line, new paragraph</li>
+    </ul>
+  </details>
+      </div>
+    </details>
+
+    <details>
+      <summary>Translate</summary>
+      <div class="body">
+        <div class="tt">🌐 Translate <small>(select text, then <kbd>Alt</kbd>+<kbd>C</kbd>)</small></div>
+    <p id="modelHint" class="hint">Checking model status…</p>
+    <button id="prepare" class="secondary" type="button" hidden>Prepare translation models</button>
+        <hr class="sp">
+        <div class="tt">✨ Translate on select</div>
+    <label class="check"><input type="checkbox" id="selTranslate"><span>Show a translation when I select text on a page</span></label>
+    <div class="seg" role="group" aria-label="How to show the translation">
+      <button type="button" id="modeIcon" data-mode="icon">On icon click</button>
+      <button type="button" id="modeInstant" data-mode="instant">Instantly</button>
+    </div>
+    <p id="modeHint" class="hint"></p>
+    <label class="field">
+      <span>Translate into</span>
+      <select id="targetLang">
+        <option value="bn">Bangla</option>
+        <option value="en">English</option>
+        <option value="hi">Hindi</option>
+        <option value="ar">Arabic</option>
+        <option value="fr">French</option>
+        <option value="es">Spanish</option>
+        <option value="de">German</option>
+        <option value="it">Italian</option>
+        <option value="ja">Japanese</option>
+        <option value="ko">Korean</option>
+        <option value="zh">Chinese</option>
+        <option value="ru">Russian</option>
+        <option value="pt">Portuguese</option>
+        <option value="tr">Turkish</option>
+        <option value="id">Indonesian</option>
+        <option value="ta">Tamil</option>
+        <option value="te">Telugu</option>
+        <option value="mr">Marathi</option>
+        <option value="th">Thai</option>
+        <option value="vi">Vietnamese</option>
+      </select>
+    </label>
+      </div>
+    </details>
+
+    <details id="expander" class="grp">
+    <summary>Text expander</summary>
+    <div class="body">
+    <label class="check"><input type="checkbox" id="expEnabled"><span>Expand my short codes while I type</span></label>
+    <label class="field">
+      <span>Expand when I press</span>
+      <select id="expMode">
+        <option value="key">Space, Tab or Enter after the code</option>
+        <option value="instant">Instantly, as soon as the code is typed</option>
+      </select>
+    </label>
+    <p class="hint">Start codes with a symbol like <b>;</b> so normal words never expand (e.g. <b>;thx</b>). Use {date}, {time}, {day} for today, and {cursor} to place the cursor. Ctrl+Z undoes an expansion.</p>
+    <div class="field">
+      <label for="expTrigger"><span>Short code</span></label>
+      <input id="expTrigger" type="text" spellcheck="false" placeholder=";thx" style="box-sizing:border-box;width:100%;padding:8px;margin:4px 0 8px">
+      <label for="expText"><span>Full text</span></label>
+      <textarea id="expText" rows="4" spellcheck="false" placeholder="Thank you for your order! Dear {cursor}, ..."></textarea>
+      <button id="expAdd" class="secondary" type="button">Add / update</button>
+    </div>
+    <div id="expList" class="explist"></div>
+    <div style="display:flex;gap:8px;flex-wrap:wrap;margin:8px 0">
+      <button id="expExport" class="secondary" type="button">Export</button>
+      <button id="expImport" class="secondary" type="button">Import</button>
+      <input id="expFile" type="file" accept="application/json,.json" hidden>
+    </div>
+    <p id="expNote" class="hint" role="status"></p>
+  </div></details>
+
+    <details>
+      <summary>Screenshots</summary>
+      <div class="body">
+        <label class="check"><input type="checkbox" id="histOn"><span>Keep screenshot history in this browser</span></label>
+        <label class="field" id="histMaxRow">
+    <span>Keep the latest <small>(older ones are deleted automatically)</small></span>
+    <select id="histMax">
+      <option value="20">20 screenshots</option>
+      <option value="50">50 screenshots</option>
+      <option value="100">100 screenshots</option>
+      <option value="200">200 screenshots</option>
+    </select>
+  </label>
+      </div>
+    </details>
+  </div>
+
+  <footer>
+    <div><kbd>Alt</kbd>+<kbd>X</kbd> Bangla · <kbd>Alt</kbd>+<kbd>Z</kbd> English (US) · <kbd>Alt</kbd>+<kbd>B</kbd> phonetic typing</div>
+    <div><kbd>Alt</kbd>+<kbd>C</kbd> translate text · <kbd>Alt</kbd>+<kbd>V</kbd> translate image text · <kbd>Alt</kbd>+<kbd>S</kbd> screenshot</div>
+    <div><a href="#" id="shortcuts">Change shortcuts</a></div>
+  </footer>
+
+  <script src="ai-tools.js"></script>
+  <script src="dates.js"></script>
+  <script src="popup.js"></script>
+</body>
+</html>

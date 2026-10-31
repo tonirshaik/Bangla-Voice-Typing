@@ -1,0 +1,119 @@
+{
+  "manifest_version": 3,
+  "name": "Bangla Voice Typing",
+  "version": "1.37.0",
+  "description": "Command palette (Ctrl+K) to find and run every feature and switch between open tabs. Type in Bangla by speaking or by typing phonetically (tumi → তুমি), translate Bangla ↔ English with Alt+C, translate selected text from any language, and translate text inside images with Alt+V, and take HD screenshots (selected area or the whole scrolling page) with markup tools with Alt+S, keep a screenshot history in the browser, record the screen or a tab as WebM (with microphone), copy text out of screenshots, expand short codes into full text, find and replace words inside any text box with Ctrl+F / Alt+A, compress, resize and convert pictures or make a PDF from them (nothing is uploaded), and optionally use Gemini Flash or Chrome on-device spelling/grammar tools to fix English text.",
+  "permissions": [
+    "storage",
+    "activeTab",
+    "offscreen",
+    "unlimitedStorage",
+    "tabs",
+    "tabCapture"
+  ],
+  "icons": {
+    "16": "icons/icon16.png",
+    "32": "icons/icon32.png",
+    "48": "icons/icon48.png",
+    "128": "icons/icon128.png"
+  },
+  "content_security_policy": {
+    "extension_pages": "script-src 'self' 'wasm-unsafe-eval'; object-src 'self'"
+  },
+  "background": {
+    "service_worker": "background.js"
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "<all_urls>"
+      ],
+      "js": [
+        "lib.js",
+        "content.js"
+      ],
+      "all_frames": true,
+      "match_about_blank": true,
+      "match_origin_as_fallback": true,
+      "run_at": "document_idle"
+    },
+    {
+      "matches": [
+        "<all_urls>"
+      ],
+      "js": [
+        "lib.js",
+        "ai-tools.js",
+        "selection-translate.js",
+        "image-translate.js",
+        "screenshot.js",
+        "record-region.js"
+      ],
+      "run_at": "document_idle"
+    },
+    {
+      "matches": [
+        "<all_urls>"
+      ],
+      "js": [
+        "text-expander.js",
+        "phonetic-dict.js",
+        "bn-words.js",
+        "bn-ngrams.js",
+        "phonetic-lib.js",
+        "phonetic-typing.js",
+        "spell-lib.js",
+        "spellcheck.js",
+        "find-lib.js",
+        "find-replace.js"
+      ],
+      "all_frames": true,
+      "match_about_blank": true,
+      "match_origin_as_fallback": true,
+      "run_at": "document_idle"
+    }
+  ],
+  "action": {
+    "default_title": "Bangla Voice Typing",
+    "default_popup": "popup.html",
+    "default_icon": {
+      "16": "icons/icon16.png",
+      "32": "icons/icon32.png"
+    }
+  },
+  "commands": {
+    "voice-bangla": {
+      "suggested_key": {
+        "default": "Alt+X"
+      },
+      "description": "Toggle Bangla voice typing"
+    },
+    "voice-english": {
+      "suggested_key": {
+        "default": "Alt+Z"
+      },
+      "description": "Toggle English (US) voice typing"
+    },
+    "translate-image": {
+      "suggested_key": {
+        "default": "Alt+V"
+      },
+      "description": "Translate text in an image, Bangla ↔ English (drag a box)"
+    },
+    "translate-selection": {
+      "suggested_key": {
+        "default": "Alt+C"
+      },
+      "description": "Translate selected text, Bangla ↔ English"
+    },
+    "screenshot": {
+      "description": "Take a screenshot (select area, mark it up, save in HD). Alt+S already works on pages without setting this."
+    },
+    "screen-record": {
+      "description": "Record an area of this tab (mark it with the mouse), WebM with optional microphone"
+    }
+  },
+  "host_permissions": [
+    "<all_urls>"
+  ]
+}

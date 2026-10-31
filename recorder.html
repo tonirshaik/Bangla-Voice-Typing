@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Screen recorder</title>
+  <link rel="stylesheet" href="recorder.css">
+</head>
+<body>
+  <h1>🎥 Screen recorder</h1>
+  <p class="sub">Record a tab, a window or the whole screen as a WebM video.</p>
+
+  <section id="setup">
+    <label class="check"><input type="checkbox" id="sys" checked> Record tab / system sound</label>
+    <label class="check"><input type="checkbox" id="mic"> Record my microphone</label>
+    <label class="field">
+      <span>Quality</span>
+      <select id="quality">
+        <option value="std">Standard · 720p</option>
+        <option value="hd" selected>HD · 1080p</option>
+        <option value="max">Maximum · original screen size</option>
+      </select>
+    </label>
+    <label class="check"><input type="checkbox" id="auto" checked> Save the file automatically when I stop</label>
+    <button id="start" class="primary" type="button">● Start recording</button>
+    <p class="hint">Chrome will ask what to share. Choose <b>Tab</b> for the cleanest result and the only choice that always includes sound. If you share the whole screen, minimize this window first.</p>
+  </section>
+
+  <section id="live" hidden>
+    <div class="timer"><span class="dot"></span><span id="time">00:00</span><span id="size" class="size"></span></div>
+    <div class="row">
+      <button id="pause" class="secondary" type="button">⏸ Pause</button>
+      <button id="stop" class="danger" type="button">■ Stop &amp; save</button>
+    </div>
+    <p class="hint">You can also stop with Chrome's <b>Stop sharing</b> bar. Keep this window open while recording.</p>
+  </section>
+
+  <section id="done" hidden>
+    <video id="preview" controls playsinline></video>
+    <div class="row">
+      <button id="download" class="primary" type="button">Download WebM</button>
+      <button id="again" class="secondary" type="button">Record again</button>
+    </div>
+    <p id="fileInfo" class="hint"></p>
+  </section>
+
+  <p id="note" class="note" hidden></p>
+  <script src="recorder.js"></script>
+</body>
+</html>
