@@ -1,0 +1,254 @@
+[
+  {
+    "roman": "ami",
+    "expected": "আমি"
+  },
+  {
+    "roman": "amar",
+    "expected": "আমার"
+  },
+  {
+    "roman": "tumi",
+    "expected": "তুমি"
+  },
+  {
+    "roman": "tomar",
+    "expected": "তমার"
+  },
+  {
+    "roman": "jonno",
+    "expected": "জন্ন"
+  },
+  {
+    "roman": "jonyo",
+    "expected": "জন্য"
+  },
+  {
+    "roman": "bhalo",
+    "expected": "ভালো"
+  },
+  {
+    "roman": "valo",
+    "expected": "ভালো"
+  },
+  {
+    "roman": "korbo",
+    "expected": "করবো"
+  },
+  {
+    "roman": "korchi",
+    "expected": "করছি"
+  },
+  {
+    "roman": "kore",
+    "expected": "করে"
+  },
+  {
+    "roman": "koro",
+    "expected": "করো"
+  },
+  {
+    "roman": "bondhu",
+    "expected": "বন্ধু"
+  },
+  {
+    "roman": "bangla",
+    "expected": "বাংলা"
+  },
+  {
+    "roman": "rri",
+    "expected": "ঋ"
+  },
+  {
+    "roman": "rriya",
+    "expected": "ঋয়া"
+  },
+  {
+    "roman": "shikkha",
+    "expected": "শিক্ষা"
+  },
+  {
+    "roman": "khub",
+    "expected": "খুব"
+  },
+  {
+    "roman": "khela",
+    "expected": "খেলা"
+  },
+  {
+    "roman": "desh",
+    "expected": "দেশ"
+  },
+  {
+    "roman": "manush",
+    "expected": "মানুশ"
+  },
+  {
+    "roman": "bhasha",
+    "expected": "ভাশা"
+  },
+  {
+    "roman": "o",
+    "expected": "ও"
+  },
+  {
+    "roman": "O",
+    "expected": "ও"
+  },
+  {
+    "roman": "oi",
+    "expected": "ঐ"
+  },
+  {
+    "roman": "ou",
+    "expected": "ঔ"
+  },
+  {
+    "roman": "aa",
+    "expected": "আ"
+  },
+  {
+    "roman": "ii",
+    "expected": "ঈ"
+  },
+  {
+    "roman": "uu",
+    "expected": "ঊ"
+  },
+  {
+    "roman": "oo",
+    "expected": "উ"
+  },
+  {
+    "roman": "kormo",
+    "expected": "করমো"
+  },
+  {
+    "roman": "korrmo",
+    "expected": "কর্ম"
+  },
+  {
+    "roman": "proshno",
+    "expected": "প্রশ্ন"
+  },
+  {
+    "roman": "shobdo",
+    "expected": "শব্দ"
+  },
+  {
+    "roman": "shomoy",
+    "expected": "শময়"
+  },
+  {
+    "roman": "dhonnobad",
+    "expected": "ধন্নবাদ"
+  },
+  {
+    "roman": "bhalobashi",
+    "expected": "ভালবাশি"
+  },
+  {
+    "roman": "computer",
+    "expected": "চম্পুতের"
+  },
+  {
+    "roman": "phone",
+    "expected": "ফনে"
+  },
+  {
+    "roman": "school",
+    "expected": "সছুল"
+  },
+  {
+    "roman": "krishi",
+    "expected": "ক্রিশি"
+  },
+  {
+    "roman": "shokti",
+    "expected": "শক্তি"
+  },
+  {
+    "roman": "gyaan",
+    "expected": "গ্যান"
+  },
+  {
+    "roman": "gyan",
+    "expected": "গ্যান"
+  },
+  {
+    "roman": "khoma",
+    "expected": "খমা"
+  },
+  {
+    "roman": "khushi",
+    "expected": "খুশি"
+  },
+  {
+    "roman": "dukkho",
+    "expected": "দুক্ষো"
+  },
+  {
+    "roman": "prem",
+    "expected": "প্রেম"
+  },
+  {
+    "roman": "prithibi",
+    "expected": "প্রিথিবি"
+  },
+  {
+    "roman": "shundor",
+    "expected": "শুন্দর"
+  },
+  {
+    "roman": "sundor",
+    "expected": "সুন্দর"
+  },
+  {
+    "roman": "jibon",
+    "expected": "জিবন"
+  },
+  {
+    "roman": "jibone",
+    "expected": "জিবনে"
+  },
+  {
+    "roman": "chhoto",
+    "expected": "ছতো"
+  },
+  {
+    "roman": "boro",
+    "expected": "বরো"
+  },
+  {
+    "roman": "korona",
+    "expected": "করনা"
+  },
+  {
+    "roman": "korle",
+    "expected": "করলে"
+  },
+  {
+    "roman": "korte",
+    "expected": "করতে"
+  },
+  {
+    "roman": "kotha",
+    "expected": "কথা"
+  },
+  {
+    "roman": "kintu",
+    "expected": "কিন্তু"
+  },
+  {
+    "roman": "jodi",
+    "expected": "জদি"
+  },
+  {
+    "roman": "tahole",
+    "expected": "তাহলে"
+  },
+  {
+    "roman": "xqz",
+    "expected": "ক্স্ক্য"
+  }
+]

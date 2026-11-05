@@ -1,0 +1,1210 @@
+[
+  {
+    "roman": "ami",
+    "expected": "আমি"
+  },
+  {
+    "roman": "amar",
+    "expected": "আমার"
+  },
+  {
+    "roman": "amake",
+    "expected": "আমাকে"
+  },
+  {
+    "roman": "amra",
+    "expected": "আমরা"
+  },
+  {
+    "roman": "amader",
+    "expected": "আমাদের"
+  },
+  {
+    "roman": "tumi",
+    "expected": "তুমি"
+  },
+  {
+    "roman": "tomar",
+    "expected": "তোমার"
+  },
+  {
+    "roman": "tomake",
+    "expected": "তোমাকে"
+  },
+  {
+    "roman": "tomra",
+    "expected": "তোমরা"
+  },
+  {
+    "roman": "tomader",
+    "expected": "তোমাদের"
+  },
+  {
+    "roman": "apni",
+    "expected": "আপনি"
+  },
+  {
+    "roman": "apnar",
+    "expected": "আপনার"
+  },
+  {
+    "roman": "apnake",
+    "expected": "আপনাকে"
+  },
+  {
+    "roman": "apnara",
+    "expected": "আপনারা"
+  },
+  {
+    "roman": "apnader",
+    "expected": "আপনাদের"
+  },
+  {
+    "roman": "tui",
+    "expected": "তুই"
+  },
+  {
+    "roman": "tor",
+    "expected": "তোর"
+  },
+  {
+    "roman": "toke",
+    "expected": "তোকে"
+  },
+  {
+    "roman": "se",
+    "expected": "সে"
+  },
+  {
+    "roman": "tar",
+    "expected": "তার"
+  },
+  {
+    "roman": "take",
+    "expected": "তাকে"
+  },
+  {
+    "roman": "tara",
+    "expected": "তারা"
+  },
+  {
+    "roman": "tader",
+    "expected": "তাদের"
+  },
+  {
+    "roman": "ei",
+    "expected": "এই"
+  },
+  {
+    "roman": "eta",
+    "expected": "এটা"
+  },
+  {
+    "roman": "eti",
+    "expected": "এটি"
+  },
+  {
+    "roman": "oi",
+    "expected": "ওই"
+  },
+  {
+    "roman": "ota",
+    "expected": "ওটা"
+  },
+  {
+    "roman": "ke",
+    "expected": "কে"
+  },
+  {
+    "roman": "ki",
+    "expected": "কি"
+  },
+  {
+    "roman": "keno",
+    "expected": "কেন"
+  },
+  {
+    "roman": "kothay",
+    "expected": "কোথায়"
+  },
+  {
+    "roman": "kothao",
+    "expected": "কোথাও"
+  },
+  {
+    "roman": "kokhon",
+    "expected": "কখন"
+  },
+  {
+    "roman": "kokhono",
+    "expected": "কখনো"
+  },
+  {
+    "roman": "kobe",
+    "expected": "কবে"
+  },
+  {
+    "roman": "kemon",
+    "expected": "কেমন"
+  },
+  {
+    "roman": "kivabe",
+    "expected": "কীভাবে"
+  },
+  {
+    "roman": "kibhabe",
+    "expected": "কীভাবে"
+  },
+  {
+    "roman": "koto",
+    "expected": "কত"
+  },
+  {
+    "roman": "kon",
+    "expected": "কোন"
+  },
+  {
+    "roman": "kono",
+    "expected": "কোনো"
+  },
+  {
+    "roman": "kichu",
+    "expected": "কিছু"
+  },
+  {
+    "roman": "kew",
+    "expected": "কেউ"
+  },
+  {
+    "roman": "keu",
+    "expected": "কেউ"
+  },
+  {
+    "roman": "sei",
+    "expected": "সেই"
+  },
+  {
+    "roman": "shei",
+    "expected": "সেই"
+  },
+  {
+    "roman": "jei",
+    "expected": "যেই"
+  },
+  {
+    "roman": "je",
+    "expected": "যে"
+  },
+  {
+    "roman": "jara",
+    "expected": "যারা"
+  },
+  {
+    "roman": "jar",
+    "expected": "যার"
+  },
+  {
+    "roman": "jake",
+    "expected": "যাকে"
+  },
+  {
+    "roman": "ebong",
+    "expected": "এবং"
+  },
+  {
+    "roman": "ar",
+    "expected": "আর"
+  },
+  {
+    "roman": "kintu",
+    "expected": "কিন্তু"
+  },
+  {
+    "roman": "tobe",
+    "expected": "তবে"
+  },
+  {
+    "roman": "tobu",
+    "expected": "তবু"
+  },
+  {
+    "roman": "tai",
+    "expected": "তাই"
+  },
+  {
+    "roman": "jodi",
+    "expected": "যদি"
+  },
+  {
+    "roman": "tahole",
+    "expected": "তাহলে"
+  },
+  {
+    "roman": "tahle",
+    "expected": "তাহলে"
+  },
+  {
+    "roman": "karon",
+    "expected": "কারণ"
+  },
+  {
+    "roman": "jonno",
+    "expected": "জন্য"
+  },
+  {
+    "roman": "jonyo",
+    "expected": "জন্য"
+  },
+  {
+    "roman": "jeno",
+    "expected": "যেন"
+  },
+  {
+    "roman": "ba",
+    "expected": "বা"
+  },
+  {
+    "roman": "othoba",
+    "expected": "অথবা"
+  },
+  {
+    "roman": "naki",
+    "expected": "নাকি"
+  },
+  {
+    "roman": "shudhu",
+    "expected": "শুধু"
+  },
+  {
+    "roman": "sudhu",
+    "expected": "শুধু"
+  },
+  {
+    "roman": "abar",
+    "expected": "আবার"
+  },
+  {
+    "roman": "aro",
+    "expected": "আরও"
+  },
+  {
+    "roman": "onek",
+    "expected": "অনেক"
+  },
+  {
+    "roman": "ektu",
+    "expected": "একটু"
+  },
+  {
+    "roman": "ekdom",
+    "expected": "একদম"
+  },
+  {
+    "roman": "khub",
+    "expected": "খুব"
+  },
+  {
+    "roman": "beshi",
+    "expected": "বেশি"
+  },
+  {
+    "roman": "besi",
+    "expected": "বেশি"
+  },
+  {
+    "roman": "kom",
+    "expected": "কম"
+  },
+  {
+    "roman": "prai",
+    "expected": "প্রায়"
+  },
+  {
+    "roman": "shob",
+    "expected": "সব"
+  },
+  {
+    "roman": "sob",
+    "expected": "সব"
+  },
+  {
+    "roman": "shobai",
+    "expected": "সবাই"
+  },
+  {
+    "roman": "sobai",
+    "expected": "সবাই"
+  },
+  {
+    "roman": "shobar",
+    "expected": "সবার"
+  },
+  {
+    "roman": "sobar",
+    "expected": "সবার"
+  },
+  {
+    "roman": "shobaike",
+    "expected": "সবাইকে"
+  },
+  {
+    "roman": "sobaike",
+    "expected": "সবাইকে"
+  },
+  {
+    "roman": "onno",
+    "expected": "অন্য"
+  },
+  {
+    "roman": "onnano",
+    "expected": "অন্যান্য"
+  },
+  {
+    "roman": "moto",
+    "expected": "মতো"
+  },
+  {
+    "roman": "moton",
+    "expected": "মতন"
+  },
+  {
+    "roman": "shathe",
+    "expected": "সাথে"
+  },
+  {
+    "roman": "sathe",
+    "expected": "সাথে"
+  },
+  {
+    "roman": "songe",
+    "expected": "সঙ্গে"
+  },
+  {
+    "roman": "shonge",
+    "expected": "সঙ্গে"
+  },
+  {
+    "roman": "theke",
+    "expected": "থেকে"
+  },
+  {
+    "roman": "porjonto",
+    "expected": "পর্যন্ত"
+  },
+  {
+    "roman": "modhye",
+    "expected": "মধ্যে"
+  },
+  {
+    "roman": "moddhe",
+    "expected": "মধ্যে"
+  },
+  {
+    "roman": "vitore",
+    "expected": "ভেতরে"
+  },
+  {
+    "roman": "bhitore",
+    "expected": "ভেতরে"
+  },
+  {
+    "roman": "bhetore",
+    "expected": "ভেতরে"
+  },
+  {
+    "roman": "baire",
+    "expected": "বাইরে"
+  },
+  {
+    "roman": "upor",
+    "expected": "উপর"
+  },
+  {
+    "roman": "upore",
+    "expected": "উপরে"
+  },
+  {
+    "roman": "niche",
+    "expected": "নিচে"
+  },
+  {
+    "roman": "shamne",
+    "expected": "সামনে"
+  },
+  {
+    "roman": "samne",
+    "expected": "সামনে"
+  },
+  {
+    "roman": "pichone",
+    "expected": "পিছনে"
+  },
+  {
+    "roman": "kache",
+    "expected": "কাছে"
+  },
+  {
+    "roman": "dure",
+    "expected": "দূরে"
+  },
+  {
+    "roman": "majhe",
+    "expected": "মাঝে"
+  },
+  {
+    "roman": "ekshathe",
+    "expected": "একসাথে"
+  },
+  {
+    "roman": "ekshate",
+    "expected": "একসাথে"
+  },
+  {
+    "roman": "shesh",
+    "expected": "শেষ"
+  },
+  {
+    "roman": "sesh",
+    "expected": "শেষ"
+  },
+  {
+    "roman": "shuru",
+    "expected": "শুরু"
+  },
+  {
+    "roman": "suru",
+    "expected": "শুরু"
+  },
+  {
+    "roman": "prothom",
+    "expected": "প্রথম"
+  },
+  {
+    "roman": "ditiyo",
+    "expected": "দ্বিতীয়"
+  },
+  {
+    "roman": "tritiyo",
+    "expected": "তৃতীয়"
+  },
+  {
+    "roman": "ekhon",
+    "expected": "এখন"
+  },
+  {
+    "roman": "tokhon",
+    "expected": "তখন"
+  },
+  {
+    "roman": "jokhon",
+    "expected": "যখন"
+  },
+  {
+    "roman": "aj",
+    "expected": "আজ"
+  },
+  {
+    "roman": "ajke",
+    "expected": "আজকে"
+  },
+  {
+    "roman": "kal",
+    "expected": "কাল"
+  },
+  {
+    "roman": "porshu",
+    "expected": "পরশু"
+  },
+  {
+    "roman": "ekhane",
+    "expected": "এখানে"
+  },
+  {
+    "roman": "okhane",
+    "expected": "ওখানে"
+  },
+  {
+    "roman": "shekhane",
+    "expected": "সেখানে"
+  },
+  {
+    "roman": "sekhane",
+    "expected": "সেখানে"
+  },
+  {
+    "roman": "jekhane",
+    "expected": "যেখানে"
+  },
+  {
+    "roman": "ekhono",
+    "expected": "এখনো"
+  },
+  {
+    "roman": "tokhono",
+    "expected": "তখনো"
+  },
+  {
+    "roman": "shomoy",
+    "expected": "সময়"
+  },
+  {
+    "roman": "somoy",
+    "expected": "সময়"
+  },
+  {
+    "roman": "din",
+    "expected": "দিন"
+  },
+  {
+    "roman": "raat",
+    "expected": "রাত"
+  },
+  {
+    "roman": "rat",
+    "expected": "রাত"
+  },
+  {
+    "roman": "shokal",
+    "expected": "সকাল"
+  },
+  {
+    "roman": "sokal",
+    "expected": "সকাল"
+  },
+  {
+    "roman": "bikel",
+    "expected": "বিকেল"
+  },
+  {
+    "roman": "bikal",
+    "expected": "বিকাল"
+  },
+  {
+    "roman": "dupur",
+    "expected": "দুপুর"
+  },
+  {
+    "roman": "shondha",
+    "expected": "সন্ধ্যা"
+  },
+  {
+    "roman": "sondha",
+    "expected": "সন্ধ্যা"
+  },
+  {
+    "roman": "ghonta",
+    "expected": "ঘণ্টা"
+  },
+  {
+    "roman": "minit",
+    "expected": "মিনিট"
+  },
+  {
+    "roman": "shopta",
+    "expected": "সপ্তাহ"
+  },
+  {
+    "roman": "mash",
+    "expected": "মাস"
+  },
+  {
+    "roman": "bochor",
+    "expected": "বছর"
+  },
+  {
+    "roman": "age",
+    "expected": "আগে"
+  },
+  {
+    "roman": "ager",
+    "expected": "আগের"
+  },
+  {
+    "roman": "pore",
+    "expected": "পরে"
+  },
+  {
+    "roman": "porer",
+    "expected": "পরের"
+  },
+  {
+    "roman": "robibar",
+    "expected": "রবিবার"
+  },
+  {
+    "roman": "shombar",
+    "expected": "সোমবার"
+  },
+  {
+    "roman": "sombar",
+    "expected": "সোমবার"
+  },
+  {
+    "roman": "mongolbar",
+    "expected": "মঙ্গলবার"
+  },
+  {
+    "roman": "budhbar",
+    "expected": "বুধবার"
+  },
+  {
+    "roman": "brihoshpotibar",
+    "expected": "বৃহস্পতিবার"
+  },
+  {
+    "roman": "shukrobar",
+    "expected": "শুক্রবার"
+  },
+  {
+    "roman": "shonibar",
+    "expected": "শনিবার"
+  },
+  {
+    "roman": "ek",
+    "expected": "এক"
+  },
+  {
+    "roman": "ekta",
+    "expected": "একটা"
+  },
+  {
+    "roman": "ekti",
+    "expected": "একটি"
+  },
+  {
+    "roman": "dui",
+    "expected": "দুই"
+  },
+  {
+    "roman": "duto",
+    "expected": "দুটো"
+  },
+  {
+    "roman": "tin",
+    "expected": "তিন"
+  },
+  {
+    "roman": "tinte",
+    "expected": "তিনটে"
+  },
+  {
+    "roman": "char",
+    "expected": "চার"
+  },
+  {
+    "roman": "panch",
+    "expected": "পাঁচ"
+  },
+  {
+    "roman": "choy",
+    "expected": "ছয়"
+  },
+  {
+    "roman": "shat",
+    "expected": "সাত"
+  },
+  {
+    "roman": "sat",
+    "expected": "সাত"
+  },
+  {
+    "roman": "at",
+    "expected": "আট"
+  },
+  {
+    "roman": "noy",
+    "expected": "নয়"
+  },
+  {
+    "roman": "dosh",
+    "expected": "দশ"
+  },
+  {
+    "roman": "osh",
+    "expected": "দশ"
+  },
+  {
+    "roman": "ekush",
+    "expected": "একুশ"
+  },
+  {
+    "roman": "shoto",
+    "expected": "শত"
+  },
+  {
+    "roman": "hajar",
+    "expected": "হাজার"
+  },
+  {
+    "roman": "lokkho",
+    "expected": "লক্ষ"
+  },
+  {
+    "roman": "koti",
+    "expected": "কোটি"
+  },
+  {
+    "roman": "kore",
+    "expected": "করে"
+  },
+  {
+    "roman": "kori",
+    "expected": "করি"
+  },
+  {
+    "roman": "koro",
+    "expected": "করো"
+  },
+  {
+    "roman": "korun",
+    "expected": "করুন"
+  },
+  {
+    "roman": "korbo",
+    "expected": "করবো"
+  },
+  {
+    "roman": "korbe",
+    "expected": "করবে"
+  },
+  {
+    "roman": "korchi",
+    "expected": "করছি"
+  },
+  {
+    "roman": "korcho",
+    "expected": "করছো"
+  },
+  {
+    "roman": "korchen",
+    "expected": "করছেন"
+  },
+  {
+    "roman": "korche",
+    "expected": "করছে"
+  },
+  {
+    "roman": "korechi",
+    "expected": "করেছি"
+  },
+  {
+    "roman": "korecho",
+    "expected": "করেছো"
+  },
+  {
+    "roman": "koreche",
+    "expected": "করেছে"
+  },
+  {
+    "roman": "korte",
+    "expected": "করতে"
+  },
+  {
+    "roman": "korle",
+    "expected": "করলে"
+  },
+  {
+    "roman": "korlam",
+    "expected": "করলাম"
+  },
+  {
+    "roman": "korlo",
+    "expected": "করলো"
+  },
+  {
+    "roman": "hoy",
+    "expected": "হয়"
+  },
+  {
+    "roman": "hobe",
+    "expected": "হবে"
+  },
+  {
+    "roman": "hoye",
+    "expected": "হয়ে"
+  },
+  {
+    "roman": "hoyeche",
+    "expected": "হয়েছে"
+  },
+  {
+    "roman": "hoyechhe",
+    "expected": "হয়েছে"
+  },
+  {
+    "roman": "hocche",
+    "expected": "হচ্ছে"
+  },
+  {
+    "roman": "hochchhe",
+    "expected": "হচ্ছে"
+  },
+  {
+    "roman": "holo",
+    "expected": "হলো"
+  },
+  {
+    "roman": "hole",
+    "expected": "হলে"
+  },
+  {
+    "roman": "hote",
+    "expected": "হতে"
+  },
+  {
+    "roman": "jai",
+    "expected": "যাই"
+  },
+  {
+    "roman": "jabo",
+    "expected": "যাবো"
+  },
+  {
+    "roman": "jabe",
+    "expected": "যাবে"
+  },
+  {
+    "roman": "jachchi",
+    "expected": "যাচ্ছি"
+  },
+  {
+    "roman": "jacchi",
+    "expected": "যাচ্ছি"
+  },
+  {
+    "roman": "jacche",
+    "expected": "যাচ্ছে"
+  },
+  {
+    "roman": "jao",
+    "expected": "যাও"
+  },
+  {
+    "roman": "jan",
+    "expected": "যান"
+  },
+  {
+    "roman": "jete",
+    "expected": "যেতে"
+  },
+  {
+    "roman": "gelo",
+    "expected": "গেলো"
+  },
+  {
+    "roman": "gechi",
+    "expected": "গেছি"
+  },
+  {
+    "roman": "geche",
+    "expected": "গেছে"
+  },
+  {
+    "roman": "gechhe",
+    "expected": "গেছে"
+  },
+  {
+    "roman": "ashi",
+    "expected": "আসি"
+  },
+  {
+    "roman": "asbo",
+    "expected": "আসবো"
+  },
+  {
+    "roman": "ashbe",
+    "expected": "আসবে"
+  },
+  {
+    "roman": "asbe",
+    "expected": "আসবে"
+  },
+  {
+    "roman": "asho",
+    "expected": "আসো"
+  },
+  {
+    "roman": "esho",
+    "expected": "এসো"
+  },
+  {
+    "roman": "eshe",
+    "expected": "এসে"
+  },
+  {
+    "roman": "ese",
+    "expected": "এসে"
+  },
+  {
+    "roman": "aschhe",
+    "expected": "আসছে"
+  },
+  {
+    "roman": "asche",
+    "expected": "আসছে"
+  },
+  {
+    "roman": "ashchi",
+    "expected": "আসছি"
+  },
+  {
+    "roman": "aschi",
+    "expected": "আসছি"
+  },
+  {
+    "roman": "achi",
+    "expected": "আছি"
+  },
+  {
+    "roman": "acho",
+    "expected": "আছো"
+  },
+  {
+    "roman": "achen",
+    "expected": "আছেন"
+  },
+  {
+    "roman": "ache",
+    "expected": "আছে"
+  },
+  {
+    "roman": "nai",
+    "expected": "নাই"
+  },
+  {
+    "roman": "nei",
+    "expected": "নেই"
+  },
+  {
+    "roman": "bolo",
+    "expected": "বলো"
+  },
+  {
+    "roman": "bolchi",
+    "expected": "বলছি"
+  },
+  {
+    "roman": "bole",
+    "expected": "বলে"
+  },
+  {
+    "roman": "bolbo",
+    "expected": "বলবো"
+  },
+  {
+    "roman": "boli",
+    "expected": "বলি"
+  },
+  {
+    "roman": "bolen",
+    "expected": "বলেন"
+  },
+  {
+    "roman": "bollam",
+    "expected": "বললাম"
+  },
+  {
+    "roman": "bolte",
+    "expected": "বলতে"
+  },
+  {
+    "roman": "dekho",
+    "expected": "দেখো"
+  },
+  {
+    "roman": "dekhi",
+    "expected": "দেখি"
+  },
+  {
+    "roman": "dekhbo",
+    "expected": "দেখবো"
+  },
+  {
+    "roman": "dekhe",
+    "expected": "দেখে"
+  },
+  {
+    "roman": "dekhlam",
+    "expected": "দেখলাম"
+  },
+  {
+    "roman": "dekhte",
+    "expected": "দেখতে"
+  },
+  {
+    "roman": "shuno",
+    "expected": "শোনো"
+  },
+  {
+    "roman": "suno",
+    "expected": "শোনো"
+  },
+  {
+    "roman": "shuni",
+    "expected": "শুনি"
+  },
+  {
+    "roman": "shunbo",
+    "expected": "শুনবো"
+  },
+  {
+    "roman": "khai",
+    "expected": "খাই"
+  },
+  {
+    "roman": "khabo",
+    "expected": "খাবো"
+  },
+  {
+    "roman": "khacchi",
+    "expected": "খাচ্ছি"
+  },
+  {
+    "roman": "kheyechi",
+    "expected": "খেয়েছি"
+  },
+  {
+    "roman": "kheye",
+    "expected": "খেয়ে"
+  },
+  {
+    "roman": "dao",
+    "expected": "দাও"
+  },
+  {
+    "roman": "dibo",
+    "expected": "দিবো"
+  },
+  {
+    "roman": "dilam",
+    "expected": "দিলাম"
+  },
+  {
+    "roman": "diyechi",
+    "expected": "দিয়েছি"
+  },
+  {
+    "roman": "diye",
+    "expected": "দিয়ে"
+  },
+  {
+    "roman": "dite",
+    "expected": "দিতে"
+  },
+  {
+    "roman": "nao",
+    "expected": "নাও"
+  },
+  {
+    "roman": "nibo",
+    "expected": "নিবো"
+  },
+  {
+    "roman": "niye",
+    "expected": "নিয়ে"
+  },
+  {
+    "roman": "nilam",
+    "expected": "নিলাম"
+  },
+  {
+    "roman": "nite",
+    "expected": "নিতে"
+  },
+  {
+    "roman": "pari",
+    "expected": "পারি"
+  },
+  {
+    "roman": "parbo",
+    "expected": "পারবো"
+  },
+  {
+    "roman": "parbe",
+    "expected": "পারবে"
+  },
+  {
+    "roman": "paro",
+    "expected": "পারো"
+  },
+  {
+    "roman": "parchi",
+    "expected": "পারছি"
+  },
+  {
+    "roman": "pai",
+    "expected": "পাই"
+  },
+  {
+    "roman": "pabo",
+    "expected": "পাবো"
+  },
+  {
+    "roman": "peyechi",
+    "expected": "পেয়েছি"
+  },
+  {
+    "roman": "peye",
+    "expected": "পেয়ে"
+  },
+  {
+    "roman": "pete",
+    "expected": "পেতে"
+  },
+  {
+    "roman": "chai",
+    "expected": "চাই"
+  },
+  {
+    "roman": "chao",
+    "expected": "চাও"
+  },
+  {
+    "roman": "chacchi",
+    "expected": "চাচ্ছি"
+  },
+  {
+    "roman": "chay",
+    "expected": "চায়"
+  },
+  {
+    "roman": "chaile",
+    "expected": "চাইলে"
+  },
+  {
+    "roman": "lagbe",
+    "expected": "লাগবে"
+  },
+  {
+    "roman": "lage",
+    "expected": "লাগে"
+  },
+  {
+    "roman": "lagche",
+    "expected": "লাগছে"
+  },
+  {
+    "roman": "likhbo",
+    "expected": "লিখবো"
+  },
+  {
+    "roman": "likhi",
+    "expected": "লিখি"
+  },
+  {
+    "roman": "likhe",
+    "expected": "লিখে"
+  },
+  {
+    "roman": "likhte",
+    "expected": "লিখতে"
+  },
+  {
+    "roman": "dhonnobad",
+    "expected": "ধন্যবাদ"
+  },
+  {
+    "roman": "bhalobashi",
+    "expected": "ভালোবাসি"
+  }
+]
