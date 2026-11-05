@@ -345,7 +345,7 @@
     }
 
     let text = tidy(res.text);
-    if (!/\p{L}/u.test(text)) {
+    if (!/[\p{L}\p{N}]/u.test(text)) {
       setCard({ label: '🖼️', text: MSG.empty, kind: 'err' });
       placeCard();
       return;
@@ -355,6 +355,12 @@
       truncated = true;
     }
     ocrText = text;
+    if (!/\p{L}/u.test(text)) { // only numbers/symbols: no translation, just show it for copying
+      result = text;
+      setCard({ label: '🖼️ 123', text, note: truncated ? MSG.cut : '', ready: true });
+      placeCard();
+      return;
+    }
     translate(my);
   }
 
